@@ -3,11 +3,23 @@
 # Part 1
 
 def sum arr
-  # YOUR CODE HERE
+  if arr.empty?
+    return 0
+  end
+  sum = 0
+  arr.each{|a| sum+=a}
+  return sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  if arr.empty?
+    return 0
+  end
+  if arr.size==1
+    return arr[0]
+  end
+  sa = arr.sort.reverse
+  return sa[0]+sa[1]
 end
 
 def sum_to_n? arr, n
